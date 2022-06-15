@@ -1,4 +1,4 @@
-## Group Members:
+## Group Members of team8:
 - Spencer Simon
 - Luke Kinoshi
 - Sabrina Flores
