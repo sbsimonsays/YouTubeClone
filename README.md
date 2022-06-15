@@ -1,4 +1,4 @@
-Group Members:
+## Group Members:
 - Spencer Simon
 - Luke Kinoshi
 - Sabrina Flores
