@@ -3,8 +3,9 @@
 - Luke Kinoshi
 - Sabrina Flores
 
-[Trello] (https://miro.com/app/board/uXjVOsh69gU=/)
-[Miro] (https://trello.com/b/srjgQJFX/youtubeclone)
+[Trello](https://miro.com/app/board/uXjVOsh69gU=/)
+
+[Miro](https://trello.com/b/srjgQJFX/youtubeclone)
 
 
 # Getting Started with Create React App
