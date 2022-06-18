@@ -1,7 +1,11 @@
-Group Members:
+## Group Members of team8:
 - Spencer Simon
 - Luke Kinoshi
 - Sabrina Flores
+
+[TRELLO](https://miro.com/app/board/uXjVOsh69gU=/)
+
+[MIRO](https://trello.com/b/srjgQJFX/youtubeclone)
 
 
 # Getting Started with Create React App
