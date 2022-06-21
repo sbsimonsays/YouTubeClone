@@ -1,7 +1,5 @@
 import React from "react-router-dom";
 
-const Search = () => {
-
-}
+const Search = () => {};
 
 export default Search;

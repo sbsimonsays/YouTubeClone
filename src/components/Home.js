@@ -1,14 +1,15 @@
-import React from "react-router-dom";
+import React from "react";
+import "./Home.css";
 
-const Home = () => {
-    return (
-        <div>
-            <form>
-                <input type="text" name="search" id="search" placeholder="Please submit a search!"></input>
-                <button type="submit" id="submit">Search...</button>
-            </form>
-        </div>
-    )
+//component
+import YouTube from "./YouTube";
+
+function Home() {
+  return (
+    <div className="homepage">
+      <YouTube />
+    </div>
+  );
 }
 
 export default Home;

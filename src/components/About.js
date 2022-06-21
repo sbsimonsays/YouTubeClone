@@ -1,46 +1,59 @@
 import React from "react-router-dom";
+import Navbar from "./Navbar";
 import "./About.css"
 
 // Components
-import Navbar from "./Navbar";
 
 const About = () => {
   return (
-    <div className="about">
-      <Navbar />
-
-      <h2>About the Project:</h2>
+    <div className="abouthead">
+      <h1>About this Project:</h1>
       <section className="aboutproject">
-      <div className="projectdes">
-        <p>Three talented developers have come together to create this application. This YouTube clone is created using Javascript, the React library, the YouTube API, and CSS styling. </p>
-      </div>
+        <div className="projectpara">
+          <p>
+            The Team of Luke Kinoshi, Sabrina Escobar, and Spencer Simon have brought upon you the newest technology in video searching. 
+          </p>
+        </div>
       </section>
 
+      <h1 className="aboutdev">About the Developers</h1>
+      <section className="aboutsection">
+        <div className="dev1">
+          <div className="devimg">
+            <img src={lukeURL} alt="luke" />
+          </div>
+          <p>
+            <h1>Luke Kinoshi</h1>
+          INFO ABOUT LUKE!
+          </p>
+        </div>
 
-      <div className="aboutdev">
-        <h2>Developers</h2>
+        <div className="dev2">
+          <div className="devimg">
+            <img src={sabrinaURL} alt="sabrina" />
+          </div>
+          <p>
+            <h1>SABRINA ESCOBAR</h1>
+            INFO ON SPENCER
+          </p>
+        </div>
 
-        <section className="dev1">
-          {/* <img></img> */}
-          <h3>Luke Kinoshi</h3>
-          <p>BIOGRAPHY OF LUKE</p>
-        </section>
-
-        <section className="dev2">
-          {/* <img></img> */}
-          <h3>Sabrina Escobar</h3>
-          <p>BIOGRAPHY OF SABRINA</p>
-        </section>
-
-        <section className="dev3">
-          {/* <img></img> */}
-          <h3>Spencer Simon</h3>
-          <p>BIOGRAPHY OF SPENCER</p>
-        </section>
-
-      </div>
+        <div className="dev3">
+          <div className="devimg">
+            <img src={spencerURL} alt="spencer" />
+          </div>
+          <p>
+            <h1>Spencer Simon</h1>
+            INFO ON SPENCER
+          </p>
+        </div>
+      </section>
     </div>
   );
 };
+
+
+
+
 
 export default About;

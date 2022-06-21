@@ -1,16 +1,17 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+
+//components
 import Home from "./components/Home";
 import About from "./components/About";
 import Videoplayer from "./components/Videoplayer";
-import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
     <div className="App">
       <header className="header">
         <div>
-      <Navbar />
+          <Navbar />
           <Routes>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
