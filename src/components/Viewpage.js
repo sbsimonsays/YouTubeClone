@@ -1,5 +1,4 @@
-const Viewpage = () => {
+function Viewpage  () {
 
 }
-
 export default Viewpage;

@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Video from "./components/Video";
+import VideosIndex from "./components/VideosIndex";
+import About from './components/About';
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import { useEffect, useState } from "react";
 
 function App() {
+  const [videos, setVideos] = useState([]);
+  const [search, setSearch] = useState("");
+  const [maxResult, setMaxResult] = useState(5);
+ 
+  
+
+  useEffect(() => {
+    fetch(
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=${maxResult}&q=${search}&type=video&key=${process.env.REACT_APP_API_KEY}`
+    )
+      .then((response) => response.json())
+      .then((data) => setVideos(data.items));
+  }, [search, maxResult]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learning react 
-        </a>
-      </header>
+      <Router>
+        <Navbar setSearch={setSearch} setMaxResult={setMaxResult} />
+        <div className="main_videos">
+          <Routes>
+            <Route path="/" element={<Home videos={videos}/>} />
+            <Route path="/videos" element={<VideosIndex videos={videos} />} />
+            <Route path="/videos/:id" element={<Video videos={videos} />} />
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 }
