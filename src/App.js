@@ -1,25 +1,31 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
 
-//components
+// Components
+import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Videoplayer from "./components/Videoplayer";
 
 const App = () => {
   return (
+    <>
     <div className="App">
-      <header className="header">
+      <Router>
+      <header className="App-header">
         <div>
-          <Navbar />
+         
           <Routes>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/video/:id" component={Videoplayer} />
+            <Route  path="/" element={<Home />} />
+            <Route  path="/about" element={<About />} />
+            <Route  path="/video/:id" element={<Videoplayer />} />
           </Routes>
         </div>
       </header>
+      </Router>
     </div>
+    </>
   );
 };
 

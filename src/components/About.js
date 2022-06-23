@@ -1,9 +1,8 @@
 import React from "react-router-dom";
-import Navbar from "./Navbar";
-import "./About.css"
+// import Navbar from "./Navbar";
+import "./About.css";
 
-// Components
-
+//components
 const About = () => {
   return (
     <div className="abouthead">
@@ -11,7 +10,8 @@ const About = () => {
       <section className="aboutproject">
         <div className="projectpara">
           <p>
-            The Team of Luke Kinoshi, Sabrina Escobar, and Spencer Simon have brought upon you the newest technology in video searching. 
+            The Team of Luke Kinoshi, Sabrina Escobar, and Spencer Simon have
+            brought upon you the newest technology in video searching.
           </p>
         </div>
       </section>
@@ -20,40 +20,27 @@ const About = () => {
       <section className="aboutsection">
         <div className="dev1">
           <div className="devimg">
-            <img src={lukeURL} alt="luke" />
+            <img src="https://i.imgur.com/gI4DNHk.jpg" alt="lukeKinoshi" />
           </div>
-          <p>
-            <h1>Luke Kinoshi</h1>
-          INFO ABOUT LUKE!
-          </p>
+          <h1>Luke Kinoshi</h1>
         </div>
 
         <div className="dev2">
           <div className="devimg">
-            <img src={sabrinaURL} alt="sabrina" />
+            <img src="https://i.imgur.com/kJEl99K.jpg" alt="sabrina" />
           </div>
-          <p>
-            <h1>SABRINA ESCOBAR</h1>
-            INFO ON SPENCER
-          </p>
+          <h1>Sabrina Escobar Flores</h1>
         </div>
 
         <div className="dev3">
           <div className="devimg">
-            <img src={spencerURL} alt="spencer" />
+            <img src="https://i.imgur.com/HLbLikW.jpg" alt="spencer" />
           </div>
-          <p>
-            <h1>Spencer Simon</h1>
-            INFO ON SPENCER
-          </p>
+          <h1>Spencer Simon</h1>
         </div>
       </section>
     </div>
   );
 };
-
-
-
-
 
 export default About;
