@@ -1,32 +1,43 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-
-// Components
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import About from "./components/About";
-import Videoplayer from "./components/Videoplayer";
+import Video from "./components/Video";
+import VideosIndex from "./components/VideosIndex";
+import About from './components/About';
 
-const App = () => {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import { useEffect, useState } from "react";
+
+function App() {
+  const [videos, setVideos] = useState([]);
+  const [search, setSearch] = useState("");
+  const [maxResult, setMaxResult] = useState(5);
+ 
+  useEffect(() => {
+    fetch(
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=${maxResult}&q=${search}&type=video&key=${process.env.REACT_APP_API_KEY}`
+    )
+      .then((response) => response.json())
+      .then((data) => setVideos(data.items));
+  }, [search, maxResult]);
+
   return (
-    <>
     <div className="App">
       <Router>
-      <header className="App-header">
-        <div>
-         
+        <Navbar setSearch={setSearch} setMaxResult={setMaxResult} />
+        <div className="main_videos">
           <Routes>
-            <Route  path="/" element={<Home />} />
-            <Route  path="/about" element={<About />} />
-            <Route  path="/video/:id" element={<Videoplayer />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/videos" element={<VideosIndex videos={videos} />} />
+            <Route path="/videos/:id" element={<Video videos={videos} />} />
+            <Route path="/about" element={<About/>} />
           </Routes>
         </div>
-      </header>
       </Router>
     </div>
-    </>
   );
-};
+}
 
 export default App;

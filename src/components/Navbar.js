@@ -1,20 +1,32 @@
+import React from "react"
 import { Link } from "react-router-dom";
-import Home from "./Home";
-import "./NavBar.css";
+import Search from "./Search";
+import "./Navbar.css"
 
-const Navbar = () => {
-  return (
-    <nav className="NavBarContainer">
-      <img
+const Navbar = ({setSearch, setMaxResult}) => {
+      return (
+        <header>
+          <nav className="navbar">
+          
+            <Link to="/">
+            <img
         src="https://jungletopp.com/wp-content/uploads/2020/10/YouTube-Logo-1024x576.jpg"
+        width={100}
         alt="youtubelogo"
       />
-      <Link to="/" >
-        <h3>Home</h3>
-      </Link>
-      <Link to="/about" ><h3>About</h3></Link>
-    </nav>
-  );
-};
+            </Link>
+          <Link to="/">
+            <h2>Home</h2>
+          </Link>
+          <Link to="/about">
+            <h2>About</h2>
+          </Link>
+        </nav>
+        <aside>
+          <Search setSearch= {setSearch} setMaxResult = {setMaxResult}/>
+        </aside>
+        </header>
+      );
+    }
 
 export default Navbar;

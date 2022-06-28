@@ -1,15 +1,9 @@
-import React from "react";
-import "./Home.css";
+import "./Home.css"
 
-//component
-import YouTube from "./YouTube";
-
-function Home() {
-  return (
-    <div className="homepage">
-      <YouTube />
-    </div>
-  );
+const Home = () => {
+    return (
+        <h1>Welcome to YouTube App</h1>
+      );
 }
 
 export default Home;
