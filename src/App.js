@@ -15,8 +15,6 @@ function App() {
   const [search, setSearch] = useState("");
   const [maxResult, setMaxResult] = useState(5);
  
-  
-
   useEffect(() => {
     fetch(
       `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=${maxResult}&q=${search}&type=video&key=${process.env.REACT_APP_API_KEY}`

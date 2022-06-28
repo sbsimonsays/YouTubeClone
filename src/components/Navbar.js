@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Search from "./Search";
 import "./Navbar.css"
 
-function Navbar ({setSearch, setMaxResult}) {
+const Navbar = ({setSearch, setMaxResult}) => {
       return (
         <header>
           <nav className="navbar">
@@ -28,4 +28,5 @@ function Navbar ({setSearch, setMaxResult}) {
         </header>
       );
     }
-    export default Navbar;
+
+export default Navbar;

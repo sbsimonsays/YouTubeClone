@@ -1,6 +1,9 @@
 import "./Home.css"
-export default function Home () {
+
+const Home = () => {
     return (
         <h1>Welcome to YouTube App</h1>
       );
 }
+
+export default Home;

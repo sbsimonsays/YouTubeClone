@@ -1,7 +1,7 @@
 import React from "react";
 import VideoCard from "./VideoCard";
 
-function VideosIndex({ videos }) {
+const VideosIndex = ({ videos }) => {
   return (
     <div className="videos-display">
       <ul>

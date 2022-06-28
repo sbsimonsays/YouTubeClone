@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-function Search({ setSearch, setMaxResult }) {
+const Search = ({ setSearch, setMaxResult }) => {
   const [inputSearch, setInputSearch] = useState("");
   const [inputMaxResult, setInputMaxResult] = useState(8);
   const navigate = useNavigate();

@@ -1,5 +1,6 @@
  import "./About.css"
- function About () {
+
+const About = () => {
     return (
         <>
         <div className="about">
@@ -25,7 +26,7 @@
             <section className="creator2">
             <div className="dev2">
           <div className="devimg">
-          <img src="https://i.imgur.com/kJEl99K.jpg” alt=“sabrinaFlores"/>
+          <img src="https://i.imgur.com/kJEl99K.jpg" alt="sabrinaFlores"/>
           </div>
           <h1>Sabrina Escobar</h1>
           <p>Hello, I am a Computer Science Engineering. I like to code, read the newspaper and take care of my baby. My biggest dream is to become a Web Developer.</p>
@@ -39,7 +40,7 @@
           </div>
           <h1>Spencer Simon</h1>
           <p>I am a skateboarder and a connoisseur of hip-hop music. I enjoy long talks on the beach, steamed lobster tails, and finding people who are genuinely interesting. Peace and love.</p>
-          <a href="https://www.w3schools.com">Spencer’s GitHub</a>
+          <a href="https://github.com/sbsimonsays">Spencer’s GitHub</a>
         </div>
             </section>
             </div>
@@ -47,4 +48,5 @@
         </>
     )
     }
+
     export default About;
