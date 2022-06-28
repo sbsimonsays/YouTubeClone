@@ -31,9 +31,10 @@ function App() {
         <Navbar setSearch={setSearch} setMaxResult={setMaxResult} />
         <div className="main_videos">
           <Routes>
-            <Route path="/" element={<Home videos={videos}/>} />
+            <Route path="/" element={<Home />} />
             <Route path="/videos" element={<VideosIndex videos={videos} />} />
             <Route path="/videos/:id" element={<Video videos={videos} />} />
+            <Route path="/about" element={<About/>} />
           </Routes>
         </div>
       </Router>

@@ -1,19 +1,24 @@
 import React from "react"
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Search from "./Search";
+import "./Navbar.css"
 
 function Navbar ({setSearch, setMaxResult}) {
       return (
         <header>
-          <nav className="navBar">
+          <nav className="navbar">
+          
             <Link to="/">
-            <h2>Youtube</h2>
+            <img
+        src="https://jungletopp.com/wp-content/uploads/2020/10/YouTube-Logo-1024x576.jpg"
+        width={100}
+        alt="youtubelogo"
+      />
             </Link>
           <Link to="/">
             <h2>Home</h2>
           </Link>
-          <Link to="/About">
+          <Link to="/about">
             <h2>About</h2>
           </Link>
         </nav>
